@@ -174,7 +174,7 @@ def np_get_workers(online):
         if json:
             for w in json['data']:
                 diff = int(now) - int(w['lastShare'])
-                if diff > OFFLINE_MIN * 60:
+                if diff > int(OFFLINE_MIN) * 60:
                     # worker offline
                     workers_off.append(w)
                 else:
