@@ -15,6 +15,7 @@ trap intexit INT
 
 source env/bin/activate
 export WALLET_ID="0xADDRESS"
+export OFFLINE_MIN=30
 export BOT_ID=""
 export BOT_TOKEN=""
 python nanopoolbot.py &

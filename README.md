@@ -37,6 +37,7 @@ pip install slackclient
 2. Edit `run.sh` and fill in the following variables
 ```
 export WALLET_ID="0xADDRESS"
+export OFFLINE_MIN=30
 export BOT_ID="<from print_bot_id.py>"
 export BOT_TOKEN="<slack api token>"
 ```
