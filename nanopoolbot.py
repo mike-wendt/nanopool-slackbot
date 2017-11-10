@@ -167,11 +167,11 @@ def np_get_workers(online):
         now = time.time()
         r = requests.get(NANOPOOL_URL+"workers/"+WALLET_ID)
         json = r.json()
-        
+
         workers_on = []
         workers_off = []
 
-        if json:
+        if json and json['status']:
             for w in json['data']:
                 diff = int(now) - int(w['lastShare'])
                 if diff > int(OFFLINE_MIN) * 60:
