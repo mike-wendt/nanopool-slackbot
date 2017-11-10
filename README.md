@@ -20,7 +20,7 @@ pip install slackclient
 
 ### Slack
 
-1. Create [a bot named `@redminebot`](https://my.slack.com/services/new/bot) and save the API token
+1. Create [a bot named `@nanopoolbot`](https://my.slack.com/services/new/bot) and save the API token
  
  `export BOT_TOKEN="<slack api token>"`
  
