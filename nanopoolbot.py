@@ -197,9 +197,9 @@ if __name__ == "__main__":
         print("NanopoolBot connected and running!")
         while True:
             command, channel, user = parse_slack_output(sc.rtm_read())
-            if command and channel and user:
+            if command and channel and user != BOT_ID:
                 handle_command(command, channel, user)
-            elif channel and user:
+            elif channel and user != BOT_ID:
                 handle_command("help", channel, user)
             time.sleep(READ_WEBSOCKET_DELAY)
     else:
