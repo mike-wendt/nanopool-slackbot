@@ -2,7 +2,7 @@ import os
 from slackclient import SlackClient
 
 
-BOT_NAME = 'redminebot'
+BOT_NAME = 'nanopoolbot'
 
 slack_client = SlackClient(os.environ.get('BOT_TOKEN'))
 
