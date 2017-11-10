@@ -95,20 +95,16 @@ def show_commands():
             "`wallet` - show link for Etherscan wallet\n"
 
 def list_workers(online):
-    try:
-        if online:
-            header = ":white_check_mark: *Workers Online"
-        else:
-            header = ":x: *Workers Offline"
+    if online:
+        header = ":white_check_mark: *Workers Online"
+    else:
+        header = ":x: *Workers Offline"
 
-        count, workers = show_workers(np_get_workers(online))
+    count, workers = show_workers(np_get_workers(online))
 
-        header += " ("+str(count)+")*\n"
-        
-        return header+workers
-    except:
-        traceback.print_exc(file=sys.stderr)
-        raise RuntimeError(":x: List operation failed")
+    header += " ("+str(count)+")*\n"
+
+    return header+workers
 
 def list_online():
     return list_workers(True)
